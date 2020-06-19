@@ -1,0 +1,15 @@
+.kullaniciBilgileriLabel{
+    color: blue;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+.kullaniciBilgileriSpan{
+    color: chocolate;
+    font-size: 10px;
+}
+.hrClass{
+    color: floralwhite;
+    height: 0.1px;
+    width: 400px;
+}

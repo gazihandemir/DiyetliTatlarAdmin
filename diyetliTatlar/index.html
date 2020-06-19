@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Diyetisyen Bilgilerine Listesi</title>
+</head>
+
+<body class="grey lighten-3" background="">
+    <!--Navbar-->
+    <nav class="z-depth-0 indigo lighten-4">
+        <div class="nav-wrapper container">
+
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="logged-in">
+                    <a href="#" class="blue-text modal-trigger" data-target="modal-create2">Danışan Başarı Hikayesi
+                        Ekle</a>
+                </li>
+                <li class="logged-in">
+                    <a href="#" class="blue-text modal-trigger" data-target="modal-create">Diyetisyen Bilgileri Ekle</a>
+                </li>
+                <li class="logged-in">
+                    <a href="#" class="blue-text modal-trigger" data-target="modal-create3">Diyet Ekle</a>
+                </li>
+                <li class="logged-out">
+                    <a href="#" class="grey-text modal-trigger" data-target="modal-login">Giriş</a>
+                </li>
+                <li class="logged-in" >
+                    <a href="#" class="red-text" id="logout">Çıkış</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- login oluştur modal-->
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <h4>Giris Yap</h4> <br>
+            <form id="login-form">
+                <div class="input-field">
+                    <input type="email" id="login-email" required>
+                    <label for="login-email">Email Adresi</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="login-password" required>
+                    <label for="login-password">Parola</label>
+                </div>
+                <button class="btn yellow darken-2">Giriş</button>
+            </form>
+        </div>
+    </div>
+    <!-- Diyetisyen Bilgileri oluştur modal-->
+    <div id="modal-create" class="modal">
+        <div class="modal-content">
+            <h4>Diyetisyen Bilgileri Ekle</h4> <br>
+            <form id="create-form">
+                <div class="input-field">
+                    <input type="text" id="email" required>
+                    <label for="email">E-mail</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="ölcüm" required>
+                    <label for="ölcüm">Hastanın Bel-Kalça-Göğüs-Bacak Ölçümeri</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="hastalik" required>
+                    <label for="hastalik">Hastalık Adı</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="tahlil" required>
+                    <label for="tahlil">Tahlilde Önemli Hususlar</label>
+                </div>
+                <div class="input-field">
+                    <textarea type="text" id="hikaye" class="materialize-textarea" required></textarea>
+                    <label for="hikaye">Danışan Hikayesi</label>
+                </div>
+                <button class="btn yellow darken-2">Bilgileri Ekle</button>
+            </form>
+        </div>
+    </div>
+    <!-- Danışan başarı hikayesi oluştur modal-->
+    <div id="modal-create2" class="modal">
+        <div class="modal-content">
+            <h4>Danışan Başarı Hikayesi Ekle</h4> <br>
+            <form id="create-form-basari">
+                <div class="input-field">
+                    <input type="text" id="basariemail" required>
+                    <label for="basariemail">E-mail</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="birinciHafta" required>
+                    <label for="birinciHafta">1. HAFTA</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="ikinciHafta" required>
+                    <label for="ikinciHafta">2. HAFTA</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="ücüncüHafta" required>
+                    <label for="ücüncüHafta">3. HAFTA</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="dördüncüHafta" required>
+                    <label for="dördüncüHafta">4. HAFTA</label>
+                </div>
+                <div class="input-field">
+                    <textarea type="text" id="basariHikaye" class="materialize-textarea" required></textarea>
+                    <label for="basariHikaye">Danışan Başarı Hikayesi</label>
+                </div>
+                <button class="btn yellow darken-2">Bilgileri Ekle</button>
+            </form>
+        </div>
+    </div>
+    <!-- Danışan başarı hikayesi oluştur modal-->
+    <div id="modal-create3" class="modal">
+        <div class="modal-content">
+            <h4>Diyet Ekle</h4> <br>
+            <form id="create-form-diyet">
+                <div class="input-field">
+                    <input type="text" id="diyetemail" required>
+                    <label for="diyetemail">E-mail</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="diyetSabah" required>
+                    <label for="diyetSabah">Sabah</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="diyetAra1" required>
+                    <label for="Ara1">1. Ara</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="diyetOglen" required>
+                    <label for="diyetOglen">Öğlen</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="diyetAra2" required>
+                    <label for="diyetAra2">2. Ara</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="diyetAksam" required>
+                    <label for="diyetAksam">Aksam</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="diyetGece" required>
+                    <label for="diyetGece">Gece</label>
+                </div>
+                <button class="btn yellow darken-2">Diyet Ekle</button>
+            </form>
+        </div>
+    </div>
+    <!-- Kullanıcı Bilgileri Listesi-->
+    <div class="container" style="margin-top: 20px;">
+        <div>
+            <ul class="collapsible z-depth-0 guides" style="border: none;"></ul>
+        </div>
+        <div>
+            <ul class="collapsible z-depth-0 guides2" style="border: none;"></ul>
+        </div>
+        <div>
+            <ul class="collapsible z-depth-0 guides3 " style="border: none;"></ul>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-firestore.js"></script>
+    <script>
+        
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/auth.js"></script>
+</body>
+
+</html>
